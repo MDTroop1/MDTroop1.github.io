@@ -14,8 +14,9 @@
 }
 .header {
     color:rgb(204, 0, 0);
-    margin: auto;
     font-family: sans-serif;
+    display: block;
+    text-align: center;
 }
 .footer {
     text-align: center;
