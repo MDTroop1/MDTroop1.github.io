@@ -14,7 +14,6 @@
     color: white;
     font-family: sans-serif;
     text-align: center;
-    display: flex;
 }
 body {
     background-color:#f8fc17e3;
@@ -32,5 +31,5 @@ body {
     bottom: 0px;
 }
 .content{
-    height: 1px;
+
 }
