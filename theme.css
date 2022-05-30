@@ -27,7 +27,7 @@ html, body{
 
 .top-navbar{
     --scroll-size: calc((var(--scroll) * 2em));
-    
+
     width: 100%;
     position: sticky;
     display: flex;
@@ -58,15 +58,20 @@ html, body{
 
 /*Image scroller*/
 
-.image-scroller{
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: hidden;
+.slideshow{
+    max-width: 70%;
+    max-height: 70%;
+    position: relative;
+    margin: auto;
 }
 
-.image-scroller img{
+.slide{
     width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*Footer*/
