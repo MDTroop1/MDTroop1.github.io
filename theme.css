@@ -1,11 +1,20 @@
+/*Page setup*/
+
+:root{
+    --scroll: 0;
+}
+
 * {
  box-sizing: border-box;
 }
+
 html, body{
     padding: 0;
     margin: 0;
-    height:100%;
 }
+
+/*Header*/
+
 .header {
     color:#cc0000;
     font-family: sans-serif;
@@ -13,7 +22,12 @@ html, body{
     text-align: center;
     font-style: italic;
 }
+
+/*Navbar*/
+
 .top-navbar{
+    --scroll-size: calc((var(--scroll) * 2em));
+
     width: 100%;
     position: sticky;
     display: flex;
@@ -28,25 +42,45 @@ html, body{
     column-gap: 1%;
 }
 .navbar-header{
-    font-size: 4em;
+    font-size: clamp(2em, calc(4em - var(--scroll-size)), 4em);
     margin: 0;
-    transition: all 1s;
 }
 .navbar-image{
-    height: 5em;
-    transition: all 1s;
+    height: clamp(3em, calc(5em - var(--scroll-size)), 5em);
 }
-.top-navbar.small .navbar-image{
-    height: 3em;
-}
-.top-navbar.small .navbar-header{
-    font-size: 2em;
-}
-.footer {
-    text-align: center;
-    bottom: 0px;
-}
+
+/*Content*/
+
 .text-content{
     max-width: 70%;
     margin: auto;
+}
+
+/*Image scroller*/
+
+.image-scroller{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+}
+
+.image-scroller img{
+    width: 100%;
+}
+
+/*Footer*/
+
+.footer {
+    text-align: center;
+    bottom: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: #d6d6d6;
+    padding: 1em 4em;
+    margin-top: 2em;
+}
+.footer a{
+    font-size: 1em;
 }

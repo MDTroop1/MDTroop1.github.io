@@ -1,14 +1,14 @@
 function handleScroll(){
-    let els = document.getElementsByClassName("top-navbar");
-    for(el of els){
-        let thresh = 150;
-        let pos = window.scrollY;
-        if (pos > thresh) {
-            el.classList.add("small");
-        } else {
-            el.classList.remove("small");
-        }
-    }
+    let docEl = document.documentElement;
+    let scrollPos = window.pageYOffset;
+
+    let docHeight = document.body.offsetHeight;
+    let winHeight = window.innerHeight;
+
+    let scroll = scrollPos / (docHeight - winHeight);
+
+    docEl.style.setProperty('--scroll', scroll);
 }
+
 window.addEventListener("scroll", handleScroll);
 handleScroll();
