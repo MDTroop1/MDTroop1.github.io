@@ -27,7 +27,7 @@ html, body{
 
 .top-navbar{
     --scroll-size: calc((var(--scroll) * 2em));
-
+    
     width: 100%;
     position: sticky;
     display: flex;
